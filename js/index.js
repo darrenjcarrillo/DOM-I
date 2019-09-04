@@ -60,12 +60,37 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-4"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
+links.forEach(item => {
+  item.style.color = "green";
+});
+
+const newLinks = document.querySelector("header nav");
+const newNavLinks = document.createElement("a");
+newNavLinks.textContent = "Hello";
+newLinks.appendChild(newNavLinks);
+
+const anotherLink = document.querySelector("header nav");
+const anotherNavLink = document.createElement("a");
+anotherNavLink.textContent = "Whats Up";
+anotherLink.prepend(anotherNavLink);
+
+navigation.querySelectorAll("a").forEach(item => {
+  item.style.color = "green";
+});
+
+/// THIS IS THE ANSWER FOR USING FOR EACH
+
+// const links = document.querySelectorAll('a');
+// ​
+// links.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]));
+// ​
+// links.forEach((item) => (item.style.color = 'green'));
+
 // links.forEach(items => {
 //   items.textContent = siteContent.nav;
 // });
 
 // Call to action
-
 const heading = document.getElementsByTagName("h1");
 heading[0].textContent = siteContent.cta.h1;
 
@@ -108,12 +133,10 @@ pContent[3].textContent = siteContent["main-content"]["product-content"];
 pContent[4].textContent = siteContent["main-content"]["vision-content"];
 
 // Contact Section
-
 h4Content[5].textContent = siteContent.contact["contact-h4"];
 pContent[5].textContent = siteContent.contact.address;
 pContent[6].textContent = siteContent.contact.phone;
 pContent[7].textContent = siteContent.contact.email;
 
 // Footer
-
 pContent[8].textContent = siteContent.footer.copyright;
